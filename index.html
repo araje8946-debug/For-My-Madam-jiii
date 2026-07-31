@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend's Dayyyy ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#0f172a,#1e1b4b,#312e81,#4c1d95);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+width:90%;
+max-width:420px;
+padding:35px;
+text-align:center;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:28px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+animation:fade 1.3s;
+z-index:10;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.photo{
+width:140px;
+height:140px;
+margin:auto;
+border-radius:50%;
+overflow:hidden;
+border:4px solid rgba(255,255,255,.3);
+box-shadow:0 0 25px hotpink;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+h1{
+color:white;
+font-size:36px;
+margin-top:25px;
+}
+
+h2{
+margin-top:10px;
+color:#ffc4e3;
+font-weight:400;
+}
+
+p{
+margin:25px 0;
+color:white;
+line-height:1.8;
+font-size:15px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#ff4d8d,#ff7bb0);
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(255,0,100,.4);
+}
+
+.heart{
+position:absolute;
+color:#ff80bf;
+font-size:20px;
+animation:float linear infinite;
+opacity:.5;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100vh);
+}
+}
+
+.music{
+position:absolute;
+top:20px;
+right:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgba(255,255,255,.1);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:22px;
+cursor:pointer;
+backdrop-filter:blur(10px);
+}
+
+footer{
+position:absolute;
+bottom:20px;
+color:white;
+opacity:.5;
+font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="music" onclick="music()">🎵</div>
+
+<audio id="song" loop>
+<source src="music.mp3">
+</audio>
+
+<div class="card">
+
+<div class="photo">
+<img src="images/profile.jpg">
+</div>
+
+<h1>Hi, Vandnaaaa ❤️</h1>
+
+<h2>My Nat 🌸</h2>
+
+<p>
+Every love story is beautiful,
+but ours is my favorite.
+
+Before the world wishes you
+Happy Girlfriend's Day...
+
+I wanted to remind you how much you mean to me.
+
+This little surprise is made only for you.
+</p>
+
+<button onclick="window.location='story.html'">
+Begin Our Journey ❤️
+</button>
+
+</div>
+
+<footer>
+Made with ❤️ by Aryann
+</footer>
+
+<script>
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(8+Math.random()*8)+"s";
+
+heart.style.animationDelay=Math.random()*8+"s";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+const song=document.getElementById("song");
+
+function music(){
+
+if(song.paused){
+song.play();
+}else{
+song.pause();
+}
+
+}
+
+</script>
+
+</body>
+</html>
